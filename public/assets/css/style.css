@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+button,
+a {
+  transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
+a,
+a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.makeup {
+  padding-top: 3rem;
+}
+
+body {
+  background-color: #fffdf5;
+}
+div.header-top {
+  background-color: whitesmoke;
+}
+div.header-nav {
+  background-color: #6762a6;
+}
+h3 {
+  font-family: Playball;
+  font-weight: bolder;
+  font-size: xx-large;
+}
+div.input-group-btn {
+  background-color: #6762a6;
+}
+footer {
+  background-color: #6762a6;
+}
+.myBtn,
+.myBtnOutline {
+  background-color: #6762a6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 2px solid #6762a6;
+}
+.myBtn:hover {
+  background-color: white;
+  color: #6762a6;
+}
+.myBtnOutline {
+  background-color: white;
+  color: #6762a6;
+  border: 2px solid #6762a6;
+}
+.myBtnOutline:hover {
+  background-color: #6762a6;
+  color: white;
+}
+img {
+  max-width: 100%;
+}
