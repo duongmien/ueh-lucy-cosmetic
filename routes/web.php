@@ -17,3 +17,6 @@ Route::get('/','HomeController@index');
 
 Route::get('/product','ProductController@index');
 
+Route::get('/checkout','CheckoutController@index');
+
+
