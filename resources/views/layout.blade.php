@@ -8,28 +8,21 @@
   <title>Lucy Cosmetic</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playball" />
+  <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Playball" />
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
   <!--=================== Bootstrap Core CSS ===================-->
-  <link href="./assets/css/bootstrap.min.css-v=102160851808464328901537612087.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/bootstrap.min.css?v=102160851808464328901537612087" rel="stylesheet" type="text/css" media="all" />
-    <!--=================== Paira Framework Main CSS ===================-->
-    <link href="./assets/css/paira.css-v=73142870747334093771537612090.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira.css?v=73142870747334093771537612090" rel="stylesheet" type="text/css" media="all" />
-    <!--=================== Paira Framework Color and Font Settings CSS ===================-->
-    <link href="./assets/css/paira-typography.css-v=121268532381626579421537612129.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira-typography.css?v=121268532381626579421537612129" rel="stylesheet" type="text/css" media="all" />
-    <!--=================== Paira Framework Main Responsive CSS ===================-->
-    <link href="./assets/css/paira-responsive.css-v=60787432624619753551537612090.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira-responsive.css?v=60787432624619753551537612090" rel="stylesheet" type="text/css" media="all" />
-    <!--=================== Font Awesome ===================-->
-    <link href="./assets/css/font-awesome.min.css-v=63684808038327842911537612088.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/font-awesome.min.css?v=63684808038327842911537612088" rel="stylesheet" type="text/css" media="all" />
- 
-    <link rel="stylesheet" type="text/css" href="./assets/css/css-family=Lato-300,400.css" tppabs="https://fonts.googleapis.com/css?family=Lato:300,400">
-    
-    
-    <link rel="stylesheet" type="text/css" href="./assets/css/css-family=Roboto-700.css" tppabs="https://fonts.googleapis.com/css?family=Roboto:700">
-    
+  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/bootstrap.min.css-v=102160851808464328901537612087.css')}}" />
+  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/paira.css-v=73142870747334093771537612090.css')}}" />
+  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/paira-typography.css-v=121268532381626579421537612129.css')}}" />
+  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/paira-responsive.css-v=60787432624619753551537612090.css')}}" />
+  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/font-awesome.min.css-v=63684808038327842911537612088.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/css-family=Lato-300,400.css')}}" />
+
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/css-family=Roboto-700.css')}}" />
 
 </head>
 
@@ -37,7 +30,7 @@
   <header>
     <div class="header-top">
       <div class="row m-0 px-5 py-3 align-items-center">
-        <div class="col-12 col-xl-2 my-2 text-center">
+        <div class="col-12 col-xl-2 my-1 text-center">
           <div class="logo">
             <div style="width: 150px; height: 100px; margin: 0 auto">
               <a href="/" style="display: inline-block; margin: 0 auto">
@@ -46,7 +39,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-xl-4 my-2 text-center">
+        <div class="col-12 col-xl-3 my-2 text-center">
           <div class="input-group">
             <input type="text" class="form-control" placeholder="Search" id="searchInput" />
             <div class="input-group-btn">
@@ -56,12 +49,12 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-xl-2 my-2 text-center">
+        <div class="col-12 col-xl-1 my-1 text-center">
           <a href="" class="text-dark">
             <i>Đăng nhập/Đăng ký</i>
           </a>
         </div>
-        <div class="col-12 col-md-6 col-xl-2 my-2 text-center row align-items-center">
+        <div class="col-12 col-md-3 col-xl-1 my-1 text-center row align-items-center">
           <div class="col-6">
             <img src="./assets/images/Rectangle 4.png" alt="" width="60" height="60" />
           </div>
@@ -74,7 +67,7 @@
             </p>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-xl-2 my-2 text-center row align-items-center">
+        <div class="col-12 col-md-3 col-xl-1 my-1 text-center row align-items-center">
           <div class="col-6">
             <img src="./assets/images/Rectangle 5.png" alt="" width="60" height="60" />
           </div>
@@ -97,13 +90,13 @@
           </a>
         </div>
         @foreach($category_product as $key => $cate)
-       
+
         <div class="col-12 col-md-3 col-xl my-1">
           <a href="{{URL::to('/category/'.$cate->category_id)}}" class="text-white d-block text-center" style="font-size: larger">{{$cate->category_name}}</a>
         </div>
         @endforeach
-        
-     
+
+
       </div>
     </div>
   </header>
@@ -162,7 +155,7 @@
       window.location.replace("/pages/search.html");
     };
   </script>
-  <script src="/assets/js/index.js" type="module"></script>
+  <script src="./assets/js/index.js" type="module"></script>
 </body>
 
 </html>
