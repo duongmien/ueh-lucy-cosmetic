@@ -14,6 +14,23 @@
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
+  <!--=================== Bootstrap Core CSS ===================-->
+  <link href="./assets/css/bootstrap.min.css-v=102160851808464328901537612087.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/bootstrap.min.css?v=102160851808464328901537612087" rel="stylesheet" type="text/css" media="all" />
+    <!--=================== Paira Framework Main CSS ===================-->
+    <link href="./assets/css/spaira.css-v=73142870747334093771537612090.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira.css?v=73142870747334093771537612090" rel="stylesheet" type="text/css" media="all" />
+    <!--=================== Paira Framework Color and Font Settings CSS ===================-->
+    <link href="./assets/css/paira-typography.css-v=121268532381626579421537612129.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira-typography.css?v=121268532381626579421537612129" rel="stylesheet" type="text/css" media="all" />
+    <!--=================== Paira Framework Main Responsive CSS ===================-->
+    <link href="./assets/css/paira-responsive.css-v=60787432624619753551537612090.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira-responsive.css?v=60787432624619753551537612090" rel="stylesheet" type="text/css" media="all" />
+    <!--=================== Font Awesome ===================-->
+    <link href="./assets/css/font-awesome.min.css-v=63684808038327842911537612088.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/font-awesome.min.css?v=63684808038327842911537612088" rel="stylesheet" type="text/css" media="all" />
+ 
+    <link rel="stylesheet" type="text/css" href="./assets/css/css-family=Lato-300,400.css" tppabs="https://fonts.googleapis.com/css?family=Lato:300,400">
+    
+    
+    <link rel="stylesheet" type="text/css" href="./assets/css/css-family=Roboto-700.css" tppabs="https://fonts.googleapis.com/css?family=Roboto:700">
+    
+
 </head>
 
 <body>
