@@ -17,7 +17,7 @@
   <!--=================== Bootstrap Core CSS ===================-->
   <link href="./assets/css/bootstrap.min.css-v=102160851808464328901537612087.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/bootstrap.min.css?v=102160851808464328901537612087" rel="stylesheet" type="text/css" media="all" />
     <!--=================== Paira Framework Main CSS ===================-->
-    <link href="./assets/css/spaira.css-v=73142870747334093771537612090.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira.css?v=73142870747334093771537612090" rel="stylesheet" type="text/css" media="all" />
+    <link href="./assets/css/paira.css-v=73142870747334093771537612090.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira.css?v=73142870747334093771537612090" rel="stylesheet" type="text/css" media="all" />
     <!--=================== Paira Framework Color and Font Settings CSS ===================-->
     <link href="./assets/css/paira-typography.css-v=121268532381626579421537612129.css" tppabs="https://cdn.shopify.com/s/files/1/1412/7610/t/17/assets/paira-typography.css?v=121268532381626579421537612129" rel="stylesheet" type="text/css" media="all" />
     <!--=================== Paira Framework Main Responsive CSS ===================-->
