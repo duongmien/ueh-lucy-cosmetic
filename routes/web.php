@@ -17,6 +17,9 @@ Route::get('/','HomeController@index');
 
 Route::get('/product','ProductController@index');
 
-Route::get('/checkout','CheckoutController@index');
+Route::get('/category','CategoryController@index');
 
+Route::get('/category/{category_id}','CategoryController@show_product_category');
+
+Route::get('/checkout','CheckoutController@index');
 
