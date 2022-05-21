@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Playball" />
+
+  <link rel="shortcut icon" href="{{asset('assets/images/logo.png')}}"  type="image/png" />
+    
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Add the slick-theme.css if you want default styling -->
@@ -34,7 +37,7 @@
           <div class="logo">
             <div style="width: 150px; height: 100px; margin: 0 auto">
               <a href="/" style="display: inline-block; margin: 0 auto">
-                <img src="./assets/images/logo.png" alt="" style="width: 150px; height: 100px" />
+                <img src="{{asset('assets/images/logo.png')}}" alt="" style="width: 150px; height: 100px" />
               </a>
             </div>
           </div>
@@ -51,12 +54,12 @@
         </div>
         <div class="col-12 col-xl-1 my-1 text-center">
           <a href="" class="text-dark">
-            <i>Đăng nhập/Đăng ký</i>
+            <i>Đăng nhập Đăng ký</i>
           </a>
         </div>
         <div class="col-12 col-md-3 col-xl-1 my-1 text-center row align-items-center">
           <div class="col-6">
-            <img src="./assets/images/Rectangle 4.png" alt="" width="60" height="60" />
+            <img src="{{asset('assets/images/Rectangle 4.png')}}" alt="" width="60" height="60" />
           </div>
           <div class="col-6" onclick="window.location.replace('/pages/checkout.html')">
             <p style="text-decoration: none; margin: 0; cursor: pointer">
@@ -69,7 +72,7 @@
         </div>
         <div class="col-12 col-md-3 col-xl-1 my-1 text-center row align-items-center">
           <div class="col-6">
-            <img src="./assets/images/Rectangle 5.png" alt="" width="60" height="60" />
+            <img src="{{asset('assets/images/Rectangle 5.png')}}" alt="" width="60" height="60" />
           </div>
           <div class="col-6">
             <p style="text-decoration: none; margin: 0; cursor: pointer">
@@ -104,7 +107,7 @@
   <footer class="text-center text-white">
     <!-- Grid container -->
     <div class="container p-4">
-      <img src="./assets/images/logotr.png" class="rounded mx-auto d-block" style="width: 200px; height: 150px" alt="..." />
+      <img src="{{asset('assets/images/logotr.png')}}" class="rounded mx-auto d-block" style="width: 200px; height: 150px" alt="..." />
       <!-- Section: Text -->
       <section class="mb-4">
         <p>
@@ -155,7 +158,7 @@
       window.location.replace("/pages/search.html");
     };
   </script>
-  <script src="./assets/js/index.js" type="module"></script>
+  <script src="{{asset('assets/js/index.js')}}" type="module"></script>
 </body>
 
 </html>

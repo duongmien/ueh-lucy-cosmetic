@@ -16,12 +16,14 @@ class CategoryController extends Controller
     {
         $category_product = DB::table('tbl_product_category')->get();
         $list_product_category = DB::table('tbl_product')->where('category_id',1)->get();
-        return view('category')->with('product',$list_product_category)->with('category_product',$category_product);
+        $category = DB::table('tbl_product_category')->where('category_id',1)->get();
+        return view('category')->with('product',$list_product_category)->with('category_product',$category_product)->with('category',$category);
     }
     public function show_product_category($category_id){
         $list_product_category = DB::table('tbl_product')->where('category_id',$category_id)->get();
         $category_product = DB::table('tbl_product_category')->get();
-        return view('category')->with('product',$list_product_category)->with('category_product',$category_product);
+        $category = DB::table('tbl_product_category')->where('category_id',$category_id)->get();
+        return view('category')->with('product',$list_product_category)->with('category_product',$category_product)->with('category',$category);
     }
     /**
      * Show the form for creating a new resource.
