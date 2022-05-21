@@ -32,7 +32,7 @@ a:hover,
 .select_options:hover,
 .single-product-tabs li.active a,
 .faqs-content h2:hover {
-    color: #3dabf0
+    color: #6f42c1
 }
 
 .collection-item a {
@@ -40,14 +40,14 @@ a:hover,
 }
 
 .collection-item a:hover {
-    color: #3dabf0
+    color: #6f42c1
 }
 
 .btn-default,
 .btn-default.disabled {
     color: #fff;
-    background-color: #3dabf0;
-    border-color: #3dabf0
+    background-color: #6f42c1;
+    border-color: #6f42c1
 }
 
 .btn-default.disabled {
@@ -60,9 +60,9 @@ a:hover,
 .btn-default:focus,
 .btn-default:hover,
 .open>.dropdown-toggle.btn-default {
-    color: #000;
-    background-color: #3dabf0;
-    border-color: #3dabf0
+    color: #fff;
+    background-color: #4c327e;
+    border-color: #6f42c1
 }
 
 .btn-primary,

@@ -36,7 +36,7 @@
         <div class="col-12 col-xl-2 my-1 text-center">
           <div class="logo">
             <div style="width: 150px; height: 100px; margin: 0 auto">
-              <a href="/" style="display: inline-block; margin: 0 auto">
+              <a href="{{URL::to('/')}}" style="display: inline-block; margin: 0 auto">
                 <img src="{{asset('assets/images/logo.png')}}" alt="" style="width: 150px; height: 100px" />
               </a>
             </div>
@@ -53,8 +53,11 @@
           </div>
         </div>
         <div class="col-12 col-xl-1 my-1 text-center">
-          <a href="" class="text-dark">
-            <i>Đăng nhập Đăng ký</i>
+          <a href="{{URL::to('login')}}" class="text-dark" >
+            <i>Đăng nhập</i>
+          </a>
+          <a href="{{URL::to('register')}}" class="text-dark">
+            <i>Đăng ký</i>
           </a>
         </div>
         <div class="col-12 col-md-3 col-xl-1 my-1 text-center row align-items-center">

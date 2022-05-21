@@ -23,3 +23,8 @@ Route::get('/category/{category_id}','CategoryController@show_product_category')
 
 Route::get('/checkout','CheckoutController@index');
 
+Route::get('/checkout','CheckoutController@index');
+
+Route::get('/login','UserController@login');
+
+Route::get('/register','UserController@register');
