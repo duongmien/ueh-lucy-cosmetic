@@ -13,18 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/','HomeController@index');
+Route::get('/', 'HomeController@index');
 
-Route::get('/product','ProductController@index');
+Route::get('/product/{category_id}', 'ProductController@detail');
 
-Route::get('/category','CategoryController@index');
+Route::get('/category', 'CategoryController@index');
 
-Route::get('/category/{category_id}','CategoryController@show_product_category');
+Route::get('/category/{category_id}', 'CategoryController@show_product_category');
 
-Route::get('/checkout','CheckoutController@index');
+Route::get('/checkout', 'CheckoutController@index');
 
-Route::get('/checkout','CheckoutController@index');
+Route::get('/checkout', 'CheckoutController@index');
 
-Route::get('/login','UserController@login');
+Route::get('/login', 'UserController@login');
 
-Route::get('/register','UserController@register');
+Route::get('/register', 'UserController@register');

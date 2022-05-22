@@ -1,20 +1,54 @@
 @extends('layout')
 @section('content')
-<section>
+<section class="single-product paira-gap-2">
     <div class="container">
-        <div class="d-flex justify-content-start align-items-center ml-3 mt-3 mb-2">
-            <i class="fa fa-home" style="color: #6762a6"></i>
-            <a class="" href="" style="font-weight: 300">/Danh mục/Sản phẩm</a>
-        </div>
-        <div class="row mb-2">
-            <div class="col-12 col-xl-3">
-                <img src="https://product.hstatic.net/1000006063/product/366f5bc3954a1c3c249f24aa1a9477d2_cbb62672897d40e8aed0fa0ee4547c12_1024x1024.jpeg" id="productImage" alt="" width="100%" />
-            </div>
-            <div class="col-12 col-xl-6">
-                <div id="productDetail"></div>
-            </div>
-            <div class="col-12 text-center col-xl-3">
-                <img src="../assets/images/info.png" width="316" height="319" alt="" />
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="row paira-product">
+                    <div class="col-md-7 col-sm-6 col-xs-12 margin-top-60">
+                        <div class="paira-product single-variants-product">
+                            <div class="single-product-image-list">
+                                <div id="product-carousel" class="carousel slide paira-single-product-slider" data-ride="carousel">
+                                    <div class="carousel-inner" role="listbox">
+
+                                        <div class="item active">
+                                            <img src="{{$product[0]->product_thumbnail}}" alt="" class="img-responsive center-block" />
+                                        </div>
+
+                                        <div class="item ">
+                                            <img src="{{$product[0]->product_thumbnail}}" alt="" class="img-responsive center-block" />
+                                        </div>
+
+                                        <div class="item ">
+                                            <img src="{{$product[0]->product_thumbnail}}" alt="" class="img-responsive center-block" />
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-sm-6 col-xs-12 margin-top-60 padding-left-xs-15">
+                        <h2 class="margin-clear paira-product-title margin-bottom-10 text-uppercase">{{$product[0]->product_name}}</h2>
+                        <p class="margin-bottom-20 paira-price-preview">
+                            <span class="paira-default-price"><span class="money">{{$product[0]->product_price}}</span></span>
+                        </p>
+                        <div class="full-width">
+                            <strong class="text-uppercase">Quantity</strong>
+                            <div class="input-group paira-quantity-group product-quantity-group margin-top-10">
+                                <div class="input-group-addon" data-direction="down"><i class="fa fa-minus"></i></div>
+                                <input type="text" value="1" class="form-control paira-single-quantity text-center" placeholder="1">
+                                <div class="input-group-addon" data-direction="up"><i class="fa fa-plus"></i></div>
+                            </div>
+                        </div>
+                        <div class="single-product-buttons">
+                            <a href="#" data-item-quantity="1" data-varient-id="25021668803" class="btn btn-primary full-width btn-block btn-lg paira-add-to-cart margin-top-30 margin-right-10"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+                        </div>
+                        <div class="">
+                            <img src="{{asset('assets/images/info.png')}}" width="316" height="319" alt="" />
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -52,6 +86,5 @@
         </div>
     </div>
 </section>
-
 
 @endsection

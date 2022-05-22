@@ -45,15 +45,15 @@ $product = DB::table('tbl_product')->where('category_id', $cate->category_id)->l
                 <div class="col-md-3 col-sm-3 col-xs-12 padding-clear">
                     <!--=================== Product ===================-->
                     <div class="paira-product product">
-                        <a href="{{URL::to('/product-detail/'.$pro->product_id)}}" tppabs="https://bulb-free-responsive-theme.myshopify.com/products/free-demo-product-name-11">
+                        <a href="{{URL::to('/product/'.$pro->product_id)}}" tppabs="https://bulb-free-responsive-theme.myshopify.com/products/free-demo-product-name-11">
                             <img src="{{$pro->product_thumbnail}}" alt="Free demo product name 11" class="paira-product-image img-responsive">
                         </a>
 
                         <div class="product-hover">
-                            <a href="{{URL::to('/product-detail/'.$pro->product_id)}}" tppabs="https://bulb-free-responsive-theme.myshopify.com/products/free-demo-product-name-11" class="btn-lg btn btn-primary margin-top-60 font-size-16">Chi tiết</a>
+                            <a href="{{URL::to('/product/'.$pro->product_id)}}" tppabs="https://bulb-free-responsive-theme.myshopify.com/products/free-demo-product-name-11" class="btn-lg btn btn-primary margin-top-60 font-size-16">Chi tiết</a>
                         </div>
                         <div class="margin-left-10 margin-right-10 product-title-price">
-                            <h4 class="margin-top-10"><a href="{{URL::to('/product-detail/'.$pro->product_id)}}" tppabs="https://bulb-free-responsive-theme.myshopify.com/products/free-demo-product-name-11" class="paira-product-title">{{$pro->product_name}}</a></h4>
+                            <h4 class="margin-top-10"><a href="{{URL::to('/product/'.$pro->product_id)}}" tppabs="https://bulb-free-responsive-theme.myshopify.com/products/free-demo-product-name-11" class="paira-product-title">{{$pro->product_name}}</a></h4>
 
                             <div class="text-center padding-bottom-10 font-size-16"><span class="money">{{$pro->product_price}} đ</span></div>
 
