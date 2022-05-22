@@ -18,7 +18,12 @@ class CheckoutController extends Controller
 
         return view('checkout')->with('category_product',$category_product);
     }
+    public function cart()
+    {
+        $category_product = DB::table('tbl_product_category')->get();
 
+        return view('cart')->with('category_product',$category_product);
+    }
     /**
      * Show the form for creating a new resource.
      *

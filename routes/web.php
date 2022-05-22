@@ -25,6 +25,14 @@ Route::get('/checkout', 'CheckoutController@index');
 
 Route::get('/checkout', 'CheckoutController@index');
 
+Route::get('/cart', 'CheckoutController@cart');
+
 Route::get('/login', 'UserController@login');
 
 Route::get('/register', 'UserController@register');
+
+Route::post('/add-cart-ajax','CartController@add_cart_ajax');
+Route::post('/add-cart-ajax-2','CartController@add_cart_ajax_2');
+Route::post('/update-cart','CartController@update_cart');
+Route::get('/show-cart','CartController@show_cart');
+Route::get('/delete-cart','CartController@delete_cart');

@@ -42,7 +42,23 @@
                             </div>
                         </div>
                         <div class="single-product-buttons">
-                            <a href="#" data-item-quantity="1" data-varient-id="25021668803" class="btn btn-primary full-width btn-block btn-lg paira-add-to-cart margin-top-30 margin-right-10"><i class="fa fa-shopping-cart"></i>Thêm vào giỏ hàng</a>
+                            <a href="#" data-item-quantity="1" data-varient-id="25021668803" data-id_product="{{$product[0]->product_id}}" class="add-to-card btn btn-primary full-width btn-block btn-lg paira-add-to-cart margin-top-30 margin-right-10">
+                                <i class="fa fa-shopping-cart"></i>
+                                Thêm vào giỏ hàng
+                            </a>
+                            <form>
+                                @csrf
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" class="cart_product_id_{{$product[0]->product_id}}" value="{{$product[0]->product_id}}">
+                                <input type="hidden" class="cart_product_name_{{$product[0]->product_id}}" value="{{$product[0]->product_name}}">
+                                <input type="hidden" class="cart_product_image_{{$product[0]->product_id}}" value="{{$product[0]->product_thumbnail}}">
+                                <input type="hidden" class="cart_product_price_{{$product[0]->product_id}}" value="{{$product[0]->product_price}}">
+                                <input type="hidden" class="cart_product_qty_{{$product[0]->product_id}}" value="1">
+                                <button type="button" class="btn btn-primary full-width btn-block btn-lg paira-add-to-cart margin-top-30 margin-right-10 add-to-card" data-id_product="{{$product[0]->product_id}}">
+                                    <span><i class="flaticon-bag"></i>Add To Cart</span>
+                                </button>
+                            </form>
+
                         </div>
                         <div class="">
                             <img src="{{asset('assets/images/info.png')}}" width="316" height="319" alt="" />

@@ -8,21 +8,22 @@
   <title>Lucy Cosmetic</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
-  <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Playball" />
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Playball" />
 
-  <link rel="shortcut icon" href="{{asset('assets/images/logo.png')}}"  type="image/png" />
-    
+  <link rel="shortcut icon" href="{{asset('assets/images/logo.png')}}" type="image/png" />
+
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
+  <link rel="stylesheet" href="{{asset('assets/css/line-awesome.min.css')}}" />
   <!--=================== Bootstrap Core CSS ===================-->
-  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/bootstrap.min.css-v=102160851808464328901537612087.css')}}" />
-  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/paira.css-v=73142870747334093771537612090.css')}}" />
-  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/paira-typography.css-v=121268532381626579421537612129.css')}}" />
-  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/paira-responsive.css-v=60787432624619753551537612090.css')}}" />
-  <link rel="stylesheet" type="text/css"  href="{{asset('assets/css/font-awesome.min.css-v=63684808038327842911537612088.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css-v=102160851808464328901537612087.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/paira.css-v=73142870747334093771537612090.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/paira-typography.css-v=121268532381626579421537612129.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/paira-responsive.css-v=60787432624619753551537612090.css')}}" />
+  <link rel="stylesheet" type="text/css" href="{{asset('assets/css/font-awesome.min.css-v=63684808038327842911537612088.css')}}" />
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css/css-family=Lato-300,400.css')}}" />
 
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css/css-family=Roboto-700.css')}}" />
@@ -53,7 +54,7 @@
           </div>
         </div>
         <div class="col-12 col-xl-1 my-1 text-center">
-          <a href="{{URL::to('login')}}" class="text-dark" >
+          <a href="{{URL::to('login')}}" class="text-dark">
             <i>Đăng nhập</i>
           </a>
           <a href="{{URL::to('register')}}" class="text-dark">
@@ -64,7 +65,7 @@
           <div class="col-6">
             <img src="{{asset('assets/images/Rectangle 4.png')}}" alt="" width="60" height="60" />
           </div>
-          <div class="col-6" onclick="window.location.replace('/pages/checkout.html')">
+          <div class="col-6" onclick="window.location.replace('/cart')">
             <p style="text-decoration: none; margin: 0; cursor: pointer">
               0đ
             </p>
@@ -161,7 +162,151 @@
       window.location.replace("/pages/search.html");
     };
   </script>
-  <script src="{{asset('assets/js/index.js')}}" type="module"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.add-to-card').click(function() {
+        var id = $(this).data('id_product');
+        var cart_product_id = $('.cart_product_id_' + id).val();
+        var cart_product_name = $('.cart_product_name_' + id).val();
+        var cart_product_image = $('.cart_product_image_' + id).val();
+        var cart_product_price = $('.cart_product_price_' + id).val();
+        var cart_product_qty = $('.cart_product_qty_' + id).val();
+        var _token = $('input[name="_token"]').val();
+        $.ajax({
+          url: '{{url("/add-cart-ajax")}}',
+          method: 'POST',
+          data: {
+            cart_product_id: cart_product_id,
+            _token: _token,
+            cart_product_name: cart_product_name,
+            cart_product_image: cart_product_image,
+            cart_product_price: cart_product_price,
+            cart_product_qty: cart_product_qty
+          },
+          success: function(data) {
+            swal({
+                title: "The product has been added to cart",
+                text: "You can continue shopping or go to the shopping cart",
+                icon: "success",
+                buttons: ["Continue", "Go to Cart"],
+                dangerMode: false,
+              })
+              .then((willDelete) => {
+                if (willDelete) {
+                  window.location.href = "{{url('/show-cart')}}";
+                }
+              });
+            $('#totalQty').load(location.href + ' .totalQtyLoad');
+          },
+          error: (error) => {
+            console.log(JSON.stringify(error));
+          }
+        })
+
+      })
+      $('.buy-now').click(function() {
+        var id = $(this).data('id_product');
+        var cart_product_id = $('.cart_product_id_' + id).val();
+        var cart_product_name = $('.cart_product_name_' + id).val();
+        var cart_product_image = $('.cart_product_image_' + id).val();
+        var cart_product_price = $('.cart_product_price_' + id).val();
+        var cart_product_qty = $('.cart_product_qty_' + id).val();
+        var _token = $('input[name="_token"]').val();
+        $.ajax({
+          url: '{{url("/add-cart-ajax-2")}}',
+          method: 'POST',
+          data: {
+            cart_product_id: cart_product_id,
+            _token: _token,
+            cart_product_name: cart_product_name,
+            cart_product_image: cart_product_image,
+            cart_product_price: cart_product_price,
+            cart_product_qty: cart_product_qty
+          },
+          success: function(data) {
+            window.location.href = "{{url('/checkout')}}";
+          },
+          error: (error) => {
+            console.log(JSON.stringify(error));
+          }
+        })
+
+      })
+      $('.changeQty').click(function(e) {
+        e.preventDefault();
+        var thisClick = $(this);
+        var quantity = $(this).closest(".cartpage").find(".qtyinput").val();
+        var product_id = $(this).closest(".cartpage").find(".product_id").val();
+        if (quantity == 0) {
+          $.ajax({
+            url: '{{url("/delete-cart")}}',
+            type: 'DELETE',
+            method: 'get',
+            data: {
+              product_id: product_id,
+              _token: '{{csrf_token()}}'
+            },
+            success: function(response) {
+              thisClick.closest(".cartpage").remove();
+              $('#totalCall').load(location.href + ' .totalLoad');
+              $('#totalQty').load(location.href + ' .totalQtyLoad');
+              // console.log("done");
+            },
+            error: (error) => {
+              console.log(JSON.stringify(error));
+            }
+          })
+        } else {
+          $.ajax({
+            url: '{{url("/update-cart")}}',
+            method: 'post',
+            data: {
+              product_id: product_id,
+              quantity: quantity,
+              _token: '{{csrf_token()}}'
+            },
+            success: function(response) {
+              // window.location.reload();   
+              thisClick.closest(".cartpage").find('.subtotal').text(response.subtotal);
+              $('#totalCall').load(location.href + ' .totalLoad');
+              $('#totalQty').load(location.href + ' .totalQtyLoad');
+              // console.log("done");
+            },
+            error: (error) => {
+              console.log(JSON.stringify(error));
+            }
+          })
+        }
+      })
+      $('.deleteItem').click(function(e) {
+        e.preventDefault();
+        var thisDelete = $(this);
+        var product_id = $(this).closest(".cartpage").find(".product_id").val();
+        $.ajax({
+          url: '{{url("/delete-cart")}}',
+          type: 'DELETE',
+          method: 'get',
+          data: {
+            product_id: product_id,
+            _token: '{{csrf_token()}}'
+          },
+          success: function(response) {
+            thisDelete.closest(".cartpage").remove();
+            $('#totalCall').load(location.href + ' .totalLoad');
+            $('#totalQty').load(location.href + ' .totalQtyLoad');
+            // console.log("done");
+          },
+          error: (error) => {
+            console.log(JSON.stringify(error));
+          }
+        })
+      })
+
+
+    })
+  </script>
 </body>
 
 </html>
