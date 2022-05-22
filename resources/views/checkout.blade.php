@@ -139,8 +139,7 @@
               </div>
               <div class="row checkout-btn">
                 <div class="col-md-6 smb-20">
-                  <h4 class="total-amt d-md-none smb-20">Total: <span>$243</span></h4>
-                  <a href="shop" class="btn style1">Continue Shopping<i class="flaticon-right-arrow-2"></i></a>
+                  <a href="{{URL::to('/')}}" class="btn style1">Continue Shopping<i class="flaticon-right-arrow-2"></i></a>
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-lg-end">
                   <h4 class="total-amt sm-none">Total: <span>{{number_format($total).' '.'VND'}}</span></h4>

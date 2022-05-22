@@ -64,9 +64,19 @@
           <div class="col-6">
             <img src="{{asset('assets/images/Rectangle 4.png')}}" alt="" width="60" height="60" />
           </div>
+          @php
+          $CartPrice = 0;
+          @endphp
+          @if (is_array(Session::get('cart')) || is_object(Session::get('cart')))
+          @foreach(Session::get('cart') as $key => $cart)
+          @php
+          $CartPrice +=  $cart['product_qty'] * $cart['product_price'];
+          @endphp
+          @endforeach
+          @endif
           <div class="col-6" onclick="window.location.replace('/cart')">
             <p style="text-decoration: none; margin: 0; cursor: pointer">
-              0đ
+              {{number_format($CartPrice).' '.'VND'}}
             </p>
             <p style="text-decoration: none; margin: 0; cursor: pointer">
               Giỏ hàng
