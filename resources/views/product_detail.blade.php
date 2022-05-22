@@ -34,18 +34,15 @@
                             <span class="paira-default-price"><span class="money">{{$product[0]->product_price}}</span></span>
                         </p>
                         <div class="full-width">
-                            <strong class="text-uppercase">Quantity</strong>
-                            <div class="input-group paira-quantity-group product-quantity-group margin-top-10">
-                                <div class="input-group-addon" data-direction="down"><i class="fa fa-minus"></i></div>
-                                <input type="text" value="1" class="form-control paira-single-quantity text-center" placeholder="1">
-                                <div class="input-group-addon" data-direction="up"><i class="fa fa-plus"></i></div>
+                            <strong class="text-uppercase">Số lượng</strong>
+                            <div class="qtySelector input-group paira-quantity-group product-quantity-group margin-top-10">
+                                <div class="input-group-addon decreaseQty changeQty" data-direction="down"><i class="fa fa-minus "></i></div>
+                                <input name="qty" type="text" class="form-control paira-single-quantity text-center qtyValue cart_product_qty_{{$product[0]->product_id}}" value="1" />
+                                <input name="product_id_hidden" type="hidden" class="qtyValue " value="{{$product[0]->product_id}}" />
+                                <div class="input-group-addon increaseQty changeQty" data-direction="up"><i class="fa fa-plus "></i></div>
                             </div>
                         </div>
                         <div class="single-product-buttons">
-                            <a href="#" data-item-quantity="1" data-varient-id="25021668803" data-id_product="{{$product[0]->product_id}}" class="add-to-card btn btn-primary full-width btn-block btn-lg paira-add-to-cart margin-top-30 margin-right-10">
-                                <i class="fa fa-shopping-cart"></i>
-                                Thêm vào giỏ hàng
-                            </a>
                             <form>
                                 @csrf
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -55,7 +52,7 @@
                                 <input type="hidden" class="cart_product_price_{{$product[0]->product_id}}" value="{{$product[0]->product_price}}">
                                 <input type="hidden" class="cart_product_qty_{{$product[0]->product_id}}" value="1">
                                 <button type="button" class="btn btn-primary full-width btn-block btn-lg paira-add-to-cart margin-top-30 margin-right-10 add-to-card" data-id_product="{{$product[0]->product_id}}">
-                                    <span><i class="flaticon-bag"></i>Add To Cart</span>
+                                    <span><i class="fa fa-cart-plus"></i> Thêm vào giỏ hàng</span>
                                 </button>
                             </form>
 

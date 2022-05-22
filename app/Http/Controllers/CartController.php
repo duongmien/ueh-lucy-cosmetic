@@ -70,6 +70,22 @@ class CartController extends Controller
             Session::put('cart',$cart);
         }
     }
+    public function update_cart(Request $request){
+        $product_id = $request->input('product_id');
+        $quantity = $request->input('quantity');
+        $subtotal = 0;
+        $cart = Session::get('cart');
+        if($cart==true){
+            foreach($cart as $session => $val){
+                if($val['product_id']==$product_id){
+                    $cart[$session]['product_qty'] = $quantity;
+                    $subtotal = $cart[$session]['product_qty'] * $cart[$session]['product_price'];
+                }
+            }
+            Session::put('cart',$cart);
+            return response()->json(['subtotal'=>number_format($subtotal).' '.'vnd']);
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *

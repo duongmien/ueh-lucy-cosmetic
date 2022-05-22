@@ -17,7 +17,6 @@
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="{{asset('assets/css/style.css')}}" />
-  <link rel="stylesheet" href="{{asset('assets/css/line-awesome.min.css')}}" />
   <!--=================== Bootstrap Core CSS ===================-->
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css/bootstrap.min.css-v=102160851808464328901537612087.css')}}" />
   <link rel="stylesheet" type="text/css" href="{{asset('assets/css/paira.css-v=73142870747334093771537612090.css')}}" />
@@ -164,6 +163,7 @@
   </script>
   <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="{{asset('assets/js/main.js')}}"></script>
   <script type="text/javascript">
     $(document).ready(function() {
       $('.add-to-card').click(function() {

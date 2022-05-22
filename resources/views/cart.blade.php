@@ -24,10 +24,10 @@
                     <div class="wishlist-table ">
                         <table class="table table-bordered">
                             <thead>
-                                <tr>
-                                    <th scope="col">Product</th>
-                                    <th scope="col">Quantity</th>
-                                    <th scope="col">Total Price</th>
+                                <tr align="center">
+                                    <th scope="col">Product</th >
+                                    <th scope="col">Quantity</th >
+                                    <th scope="col">Total Price</th >
                                     <th scope="col">Remove</th>
                                 </tr>
                             </thead>
@@ -41,14 +41,13 @@
                                     $subtotal = $cart['product_price'] * $cart['product_qty'];
                                     $total += $subtotal;
                                 @endphp
-                                <tr class="cartpage">
-                                    <td>
+                                <tr align="center" class="cartpage">
+                                    <td align="justify">
                                         <div class="wh_item">
-                                            <img src="{{$cart['product_image']}}"  height="100px" width="100px"  alt="Image">
+                                            <img src="{{$cart['product_image']}}" style="float:left;" height="100px" width="100px"  alt="Image">
                                             <div class="wh-item-info">
                                                 <a href="{{URL::to('/product/'.$cart['product_id'])}}">{{$cart['product_name']}}</a>
-                                                <p class="discount"><?php echo $cart['product_price']/1000+30?>.000 VND</p>
-                                                <span><?php echo $cart['product_price']/1000?>.000 VND</span>
+                                                <span style="display: block;"><?php echo $cart['product_price']/1000?>.000 VND</span>
                                             </div>
                                         </div>
                                     </td>
@@ -57,9 +56,9 @@
                                             <div class="product-quantity style2">
                                                 <div class="qtySelector">
                                                     <input type="hidden" class="product_id" value="{{$cart['product_id']}}">
-                                                    <span class="las la-minus decreaseQty changeQty"></span>
-                                                    <input type="text" class="qtyValue qtyinput" name="cart_quantity" value="{{$cart['product_qty']}}" />
-                                                    <span class="las la-plus increaseQty changeQty"></span>
+                                                    <span class="fa fa-minus-circle decreaseQty changeQty"></span>
+                                                    <input type="text" class="qtyValue qtyinput" style="width: 30px;border: 0px solid;text-align: center;" name="cart_quantity" value="{{$cart['product_qty']}}" />
+                                                    <span class="fa fa-plus-circle increaseQty changeQty"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,7 +72,7 @@
                                         </p>
                                     </td>
                                     <td>
-                                        <button type="button" class="deleteItem" ><i class="las la-times"></i></button>
+                                        <button type="button" class="deleteItem" style="border: 0px solid;" ><i class="fa fa-times"></i></button>
                                     </td>
                                 </tr>
                                 @endforeach
