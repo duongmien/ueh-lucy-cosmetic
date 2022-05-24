@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 24, 2022 lúc 09:38 AM
+-- Thời gian đã tạo: Th5 24, 2022 lúc 08:22 PM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
--- Phiên bản PHP: 7.4.27
+-- Phiên bản PHP: 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `lucycossmetics`
+-- Cơ sở dữ liệu: `lucycosmetic`
 --
 
 -- --------------------------------------------------------
@@ -163,30 +163,30 @@ CREATE TABLE `tbl_product` (
 
 INSERT INTO `tbl_product` (`product_id`, `producer_id`, `category_id`, `product_name`, `product_price`, `product_sold`, `product_thumbnail`, `product_preview`) VALUES
 (1, 1, 1, 'Son Thỏi Lì, Lên Màu Chuẩn Lilybyred Mood Cinema Velvet Epilogue 3.5g', 149000, 18, 'https://product.hstatic.net/1000006063/product/lilybyred_ee8a9bed80f1457c98d596bae18cff9d_1024x1024.jpg', NULL),
-(2, 2, 1, 'Mascara Làm Dài Và Cong Mi, Không Lem Không Trôi Maybelline The Hyper Curl Mascara', 102000, 34, 'https://product.hstatic.net/1000006063/product/6902395260646_6450cd5173324ebb83100516deea16cc_1024x1024.png', NULL),
+(2, 2, 1, 'Mascara Làm Dài Và Cong Mi, Không Lem Không Trôi Maybelline The Hyper Curl Mascara', 102000, 34, 'https://product.hstatic.net/1000006063/product/miss1_38b5ade4aa9b4cba88d94d9a6fc0a288_1024x1024.jpg', NULL),
 (3, 3, 1, 'Mặt Nạ Ngủ Môi Dưỡng Ẩm Chống Lão Hóa Unpa Bubi Bubi Lip Mask 9g', 199000, 25, 'https://product.hstatic.net/1000006063/product/4622_0864548d0beb4d8dafc46f342aa943b2_1024x1024_cd94c0d1f1a84866bc51aafddd22d0bc_1024x1024.jpg', NULL),
 (4, 4, 1, 'Son Kem Lì, Mịn Mượt Như Nhung Romand Milk Tea Velvet Tint 4.4g', 149000, 63, 'https://product.hstatic.net/1000006063/product/4912_121f6d9cde23493a912b2289a824c7df_1024x1024.jpg', NULL),
 (5, 3, 1, 'Son Dưỡng Dưỡng Ẩm Cho Môi Căng Mọng Unpa Bubi Bubi Lip Ampule 10ml', 99000, 33, 'https://product.hstatic.net/1000006063/product/4942_33bed52e11e84eb9815b770fba58ce4d_1024x1024.jpg', NULL),
-(6, 2, 1, 'Bút Kẻ Mắt Nước Siêu Sắc Mảnh, Không Lem Trôi Maybelline New York Hyper Sharp Liner Extreme 0.4g', 148000, 22, 'https://product.hstatic.net/1000006063/product/6902395260646_6450cd5173324ebb83100516deea16cc_1024x1024.png', NULL),
+(6, 2, 1, 'Bút Kẻ Mắt Nước Siêu Sắc Mảnh, Không Lem Trôi Maybelline New York Hyper Sharp Liner Extreme 0.4g', 148000, 22, 'https://product.hstatic.net/1000006063/product/29_f09f05b0c95142f48c1250337a398063_grande.jpg', NULL),
 (7, 2, 1, 'Kem Lót Làm Mịn Da, Che Khuyết Điểm, Se Khít Lỗ Chân Lông Maybelline Baby Skin Pore Eraser 22ml', 115000, 74, 'https://product.hstatic.net/1000006063/product/6902395260646_6450cd5173324ebb83100516deea16cc_1024x1024.png', NULL),
 (8, 5, 1, 'Mặt Nạ Ngủ Môi Dưỡng Ẩm, Loại Bỏ Da Chết Cho Môi Hồng Hào Căng Mọng Hàn Quốc Carenel Lip Night Mask 5g', 49000, 35, 'https://product.hstatic.net/1000006063/product/ddd_72d521f64b884fc7a16490a9881cf8d0_1024x1024_ad4f0a6b408f40c1ba1dbb4978c1e35f_1024x1024.jpg', NULL),
 (9, 7, 2, 'Tẩy Da Chết Quế Hồi, Cam Chanh Body Eksklyuziv Kosmetik Gel Scrub 380g', 166000, 35, 'https://product.hstatic.net/1000006063/product/80e5335a57474629d1d7ffbbc6579a80-removebg-preview_d75ce29a968148b6a7f942dfaaeaeffd_1024x1024.png', NULL),
 (10, 8, 2, 'Bông tẩy Trang 100% Cotton Thổ Nhĩ Kỳ Ipek Klasik Cotton Pads - 150 Miếng', 92000, 111, 'https://product.hstatic.net/1000006063/product/ipek-e-4_82ca528bf71544b4bbcc4c6ef909255c_1024x1024.jpg', NULL),
 (11, 9, 2, 'Bông Tẩy Trang Lameila Makeup Cotton 3 Lớp Dày Dặn Làm Sạch Da CXT002', 57000, 13, 'https://product.hstatic.net/1000006063/product/4523_a571b39def4a4b9fa98fa9b5875cbe0e_1024x1024.jpg', NULL),
-(12, 10, 2, 'Nước Tẩy Trang Làm Sạch Tươi Mát Cho Da Dầu và Nhạy cảm L\'Oreal Micellar Water 3-in-1 Refreshing Even For Sensitive Skin 400ml', 130000, 52, 'https://product.hstatic.net/1000006063/product/m11_2af753c77e8642e994754f740cd7fe85_1024x1024.png', NULL),
+(12, 10, 2, 'Nước Tẩy Trang Làm Sạch Tươi Mát Cho Da Dầu và Nhạy cảm L\'Oreal Micellar Water 3-in-1 Refreshing Even For Sensitive Skin 400ml', 130000, 52, 'https://product.hstatic.net/1000006063/product/37.2_c4cd413eec1a4220b1dce01656326f34_grande.jpg', NULL),
 (13, 11, 2, 'Mặt Nạ Miếng Dưỡng Ẩm, Dưỡng Trắng, Giảm Mụn, Phục Hồi Da Hàn Quốc BNBG (Vitamin A, B C, E)', 170000, 52, 'https://product.hstatic.net/1000006063/product/392_1d2b73ca9cf1465cb3c33364d259dcd7_1024x1024.jpg', NULL),
 (14, 12, 2, 'Mặt Nạ Tinh Chất Cấp Ẩm Chuyên Sâu Jkosmec Ultimate Hydrating Essence Mask', 140000, 83, 'https://product.hstatic.net/1000006063/product/jkosmec_new_2_b7b800dd5b194eafbbe82da51ce4a43a_1024x1024.jpg', NULL),
 (15, 10, 2, 'Nước Tẩy Trang Làm Sạch Sâu 3 In 1 L\'Oreal Micellar Water Deep Cleansing 400ml', 148000, 36, 'https://product.hstatic.net/1000006063/product/m11_2af753c77e8642e994754f740cd7fe85_1024x1024.png', NULL),
 (16, 13, 2, 'Bông Tẩy Trang 100% Cotton Ceiba Tree', 25000, 76, 'https://product.hstatic.net/1000006063/product/140_1d1b9997c39e431c956dc9aeaf179f3a_1024x1024.jpg', NULL),
 (17, 7, 3, 'Tẩy Da Chết Quế Hồi, Cam Chanh Body Eksklyuziv Kosmetik Gel Scrub 380g', 166000, 73, 'https://product.hstatic.net/1000006063/product/80e5335a57474629d1d7ffbbc6579a80-removebg-preview_d75ce29a968148b6a7f942dfaaeaeffd_1024x1024.png', NULL),
-(18, 14, 3, 'Tẩy Da Chết Body Làm Đều Màu Da Và Dưỡng Mịn Da Chiết Xuất Cà Phê Dak Lak The Cocoon Dak Lak Coffee Body Polish', 160000, 72, 'https://product.hstatic.net/1000006063/product/02_f3a422d0a72046ebb573f49de8d2bd3c_1024x1024.jpg', NULL),
+(18, 14, 3, 'Tẩy Da Chết Body Làm Đều Màu Da Và Dưỡng Mịn Da Chiết Xuất Cà Phê Dak Lak The Cocoon Dak Lak Coffee Body Polish', 160000, 72, 'https://product.hstatic.net/1000006063/product/sku_0h_4_8e325b6d618145f991f98c5c48030538_1024x1024.png', NULL),
 (19, 15, 3, 'Găng Tay Tắm Tẩy Tế Bào Chết Đa Năng Chống Trượt Làm Sạch, Làm Sáng Da Body Scrubber Glove', 9000, 27, 'https://product.hstatic.net/1000006063/product/b16_master_a6cdbdb069744d4faf365f62940b76f3_1024x1024-removebg-preview_5b022413e7c34530be2c5e2163826c60_1024x1024.png', NULL),
 (20, 14, 3, 'Combo Cocoon 04: Daklak Coffe - 2 Sản Phẩm (Tẩy Da Chết The Cocoon Dak Lak Coffee Body Polish, Kem Tẩy Da Chết The Cocoon Dak Lak Coffee Face Polish 150ml)', 233000, 95, 'https://product.hstatic.net/1000006063/product/z3342087418648_62f145548a63a74eb0666d8ca5fceb64_ddbceb2718a945c893e0f6bf58182724_1024x1024.jpg', NULL),
 (21, 16, 3, 'Muối Tắm Sữa Bò Tẩy Tế Bào Chết Cơ Thể, Làm Sáng Da, Dưỡng Da Mịn Màng A Bonne Spa Milk Salt', 25000, 84, 'https://product.hstatic.net/1000006063/product/a_bonne_d82fc4697a6b48a6a5e772f37658f005_1024x1024.jpg', NULL),
-(22, 14, 3, 'Bộ Sản Phẩm Tẩy Tế Bào Chết Môi Và Toàn Thân Chiết Xuất Cà Phê Đăk Lăk The Cocoon', 135000, 95, 'https://product.hstatic.net/1000006063/product/12_d4e08266bd8b41b895bb2562d0fd95b0_1024x1024.jpg', NULL),
-(23, 17, 3, 'Xà Phòng Giảm Mụn Cơ Thể Derladie Body Cleansing Bar For Blemish Skin 50g', 98000, 47, 'https://product.hstatic.net/1000006063/product/8809713360355_3d70406a90c7466ba23e6cac7d698f64_1024x1024.png', NULL),
+(22, 14, 3, 'Bộ Sản Phẩm Tẩy Tế Bào Chết Môi Và Toàn Thân Chiết Xuất Cà Phê Đăk Lăk The Cocoon', 135000, 95, 'https://product.hstatic.net/1000006063/product/927_d1ec4d421cd34c01be547026ac0cf975_grande.jpg', NULL),
+(23, 17, 3, 'Xà Phòng Giảm Mụn Cơ Thể Derladie Body Cleansing Bar For Blemish Skin 50g', 98000, 47, 'https://product.hstatic.net/1000006063/product/8809713360027_copy_44220e0dd9754827a76a11af1a2e5623_1024x1024.png', NULL),
 (24, 18, 3, 'Xịt trị mụn lưng, toàn thân Not4U Clear Body Mist 200ml', 279000, 37, 'https://product.hstatic.net/1000006063/product/1_4d1c9cdb4b2040aeb8b5bc6a7b99f0a8_1024x1024.jpg', NULL),
-(25, 14, 4, 'Nước Dưỡng Tóc Giảm Gãy Rụng Và Làm Mềm Tóc Tinh Dầu Bưởi The Cocoon Pomelo Hair Tonic 140ml', 228000, 37, 'https://product.hstatic.net/1000006063/product/1_b7aae5e44375479ca5eba1d661489fd5_1024x1024.jpg', NULL),
+(25, 14, 4, 'Nước Dưỡng Tóc Giảm Gãy Rụng Và Làm Mềm Tóc Tinh Dầu Bưởi The Cocoon Pomelo Hair Tonic 140ml', 228000, 37, 'https://product.hstatic.net/1000006063/product/1_51e4709b36514afba1ed5aae8b34cc66_1024x1024.jpg', NULL),
 (26, 20, 4, 'Dầu Gội Khô Girlz Only Dry Shampoo (Party Nights/ Dawn Til Dusk/ Dazzling Volume/ No Residue Nude)', 86000, 27, 'https://product.hstatic.net/1000006063/product/02851bf9e8f2f9445d77772cde9644e2_d28cd37354ce427dbcdcfca2066daa10_1024x1024.jpeg', NULL),
 (27, 10, 4, 'Dầu Gội Giúp Tóc Suôn Mượt Chiết Xuất Tinh Dầu Hoa L\'Oreal Elseve Extraordinary Oil Shampoo', 150000, 73, 'https://product.hstatic.net/1000006063/product/12_66735293b14e43eb966d898c16a5ff50_1024x1024.jpg', NULL),
 (28, 10, 4, 'Dầu Dưỡng Tóc Từ Tinh Dầu Hoa L\'Oreal Elseve Extraordinary Oil 100ml', 144000, 83, 'https://product.hstatic.net/1000006063/product/14_758f43536cea4467bc7df638adaa00be_1024x1024.jpg', NULL),
@@ -202,13 +202,13 @@ INSERT INTO `tbl_product` (`product_id`, `producer_id`, `category_id`, `product_
 (38, 22, 5, 'Xịt Thơm Toàn Thân Hương Nước Hoa Malissa Kiss Perfume Mist - Blossom 88ml', 131000, 47, 'https://product.hstatic.net/1000006063/product/d2_24f59bb5c40848a6b264062630ee6582_1024x1024.jpg', NULL),
 (39, 22, 5, 'Xịt Thơm Toàn Thân Hương Nước Hoa Malissa Kiss Body Mist Sunshine 88ml', 131000, 89, 'https://product.hstatic.net/1000006063/product/dd1_e52d6e651fda49d48ae0939de9989c4a_1024x1024.jpg', NULL),
 (40, 23, 5, 'Xịt Thơm Toàn Thân Và Tóc Bodyholic Hair & Body Mist 50ml', 129000, 66, 'https://product.hstatic.net/1000006063/product/201_c472bf90651945db80433505019e0700_1024x1024.jpg', NULL),
-(41, 26, 6, 'Máy Rửa Mặt Làm Sạch Sâu, Kết Hợp Chức Năng Massage WellDerma Cleansing Fish', 267000, 34, 'https://product.hstatic.net/1000006063/product/t10_a70ef0a5cfd14537ba4a60da9ae13e04_1024x1024.png', NULL),
-(42, 27, 6, 'Bàn Chải Điện Sạch Sâu, Công Nghệ Sóng Âm P/S S100 Pro Expertcare', 908000, 43, 'https://product.hstatic.net/1000006063/product/1_c9ea1a3c67a345f59c1293b9fac1f81c_1024x1024.png', NULL),
+(41, 26, 6, 'Máy Rửa Mặt Làm Sạch Sâu, Kết Hợp Chức Năng Massage WellDerma Cleansing Fish', 267000, 34, 'https://product.hstatic.net/1000006063/product/dd11_f1a72ca182304d9e9d53c3ae155186c9_1024x1024.jpg', NULL),
+(42, 27, 6, 'Bàn Chải Điện Sạch Sâu, Công Nghệ Sóng Âm P/S S100 Pro Expertcare', 908000, 43, 'https://product.hstatic.net/1000006063/product/6_4868673e3fed41f79fac35268ecec3d7_1024x1024.png', NULL),
 (43, 28, 6, 'Máy Massage Chống Lão Hóa Vùng Da Mắt Lifetrons EM-100', 623000, 72, 'https://product.hstatic.net/1000006063/product/98b145330fbe96e4734a5323a5284d2d_quot_4a96fe59a5ac42c98e3c3d6490e9953b_1024x1024.jpg', NULL),
-(44, 29, 6, 'Máy Triệt Lông Cá Nhân Halio IPL Hair Removal Device', 3199000, 44, 'https://product.hstatic.net/1000006063/product/8_75b3bad3b445447f8e8fed8f7787d06d_1024x1024.png', NULL),
+(44, 29, 6, 'Máy Triệt Lông Cá Nhân Halio IPL Hair Removal Device', 3199000, 44, 'https://product.hstatic.net/1000006063/product/8_de5ead1981a34353b90fc35d0813b620_1024x1024.png', NULL),
 (45, 30, 6, 'Lược Chải Đa Năng Làm Thẳng Và Uốn Tóc K.Skin Hair Straigtener Comb KD380', 889000, 62, 'https://product.hstatic.net/1000006063/product/hinhdaidien_2bf14441ec6744ba8d7fd40602050e88_1024x1024.jpg', NULL),
 (46, 28, 6, 'Máy Massage Chống Lão Hóa, Trị Liệu Mắt Lifetrons EM-700', 899000, 36, 'https://product.hstatic.net/1000006063/product/f3c8dcce79bd3703e4f0c135c5c0a42e_quot_13e021c8804a48d2832da33e6d6096df_1024x1024.jpg', NULL),
-(47, 29, 6, 'Máy Đẩy Tinh Chất Dưỡng Trắng Halio Ion Cleansing & Moisturizing Beauty Device', 969000, 35, 'https://product.hstatic.net/1000006063/product/10_7298da62556944188a8e8faed5b13552_1024x1024.png', NULL),
+(47, 29, 6, 'Máy Đẩy Tinh Chất Dưỡng Trắng Halio Ion Cleansing & Moisturizing Beauty Device', 969000, 35, 'https://product.hstatic.net/1000006063/product/10_a583b4f52c714aef9d3b0252fbd177b7_1024x1024.png', NULL),
 (48, 31, 6, '\"SIÊU CÔNG NGHỆ TRẺ HÓA KHUÔN MẶT 4.0\" Mặt Nạ Ánh Sáng Dưỡng Trắng, Hỗ Trợ Trị Mụn, Chống Lão Hóa Da Bibury Skin Therapy Light Therapy Mask', 1199000, 25, 'https://product.hstatic.net/1000006063/product/cleansing__4min___8__8a272e88ee064ca99875b8c09f3eb90d_1024x1024.png', NULL);
 
 -- --------------------------------------------------------
@@ -258,7 +258,8 @@ INSERT INTO `tbl_user` (`user_id`, `user_phone`, `user_password`, `user_name`, `
 (3, '0955156663', 'sgdsg', 'sdfg', 'sdgsdg'),
 (4, '123', '123', '123', '123'),
 (5, '1', '1', '1', '1'),
-(6, '0834254273', '123', 'Nguyễn Hồng Sơn', 'dânng');
+(6, '0834254273', '123', 'Nguyễn Hồng Sơn', 'dânng'),
+(7, '0705175740', '12345', 'user', 'Đà Nẵng');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -345,7 +346,7 @@ ALTER TABLE `tbl_product_category`
 -- AUTO_INCREMENT cho bảng `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
