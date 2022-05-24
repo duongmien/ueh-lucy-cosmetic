@@ -58,9 +58,9 @@ if ($message) {
             <form action="{{URL::to('/search')}}" method="POST">
               @csrf
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <input type="search" name="keywords" class="form-control" placeholder="Search" id="searchInput" style="width: 300px" />
+              <input type="search" name="keywords" class="form-control" placeholder="Search" id="searchInput" style="width: 300px; display: block" />
 
-              <button class="btn" style="background-color:#6f42c1 ;" id="searchBtn" type="submit">
+              <button class="btn" style="background-color:#6f42c1; display: block; height: 48px; width: 48px;" id="searchBtn" type="submit">
                 <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
               </button>
 
