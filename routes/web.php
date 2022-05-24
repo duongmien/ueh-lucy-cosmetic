@@ -31,8 +31,12 @@ Route::get('/login', 'UserController@login');
 
 Route::get('/register', 'UserController@register');
 
+Route::post('/add-user', 'UserController@add_user');
+Route::post('/check-login', 'UserController@check_login');
+Route::get('/log-out', 'UserController@log_out');
+
 Route::post('/add-cart-ajax','CartController@add_cart_ajax');
-Route::post('/add-cart-ajax-2','CartController@add_cart_ajax_2');
 Route::post('/update-cart','CartController@update_cart');
 Route::get('/show-cart','CartController@show_cart');
 Route::get('/delete-cart','CartController@delete_cart');
+Route::post('/save-checkout','CheckoutController@save_checkout');

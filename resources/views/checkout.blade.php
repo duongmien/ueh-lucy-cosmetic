@@ -53,7 +53,7 @@
                       <div class="qtySelector">
                         <input type="hidden" class="product_id" value="{{$cart['product_id']}}">
                         <input type="text" class="qtyValue qtyinput" style="width: 30px;border: 0px solid;text-align: center;" name="cart_quantity" value="{{$cart['product_qty']}}" />
-                       
+
                       </div>
                     </div>
                   </div>
@@ -85,7 +85,8 @@
             <input type="hidden" name="user_id" value="
             <?php
 
-            use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
             $user_id = Session::get('user_id');
             if ($user_id) {
@@ -110,33 +111,73 @@
             </div>
             <div class="billing-details">
               <h4 class="mb-20">Billing Details</h4>
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="text" name="shipping_name" placeholder="Your Name" required>
+
+              <?php
+              $user_id = Session::get('user_id');
+              $user_name = Session::get('name');
+              if ($user_id != null) { 
+                $user = DB::table('tbl_user')->where('user_id', $user_id)->limit(1)->get();
+                ?>
+
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="text" name="shipping_name" value="{{$user[0]->user_name}}" placeholder="Your Name" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="number" name="shipping_phone" value="{{$user[0]->user_phone}}" placeholder="Your Phone" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="email" name="shipping_email" value="" placeholder="Your Email Address">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="text" name="shipping_address" value="{{$user[0]->user_address}}" placeholder="Your Address" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input placeholder="Write notes about your order" value="" name="shipping_note" id="order_msg" cols="30" rows="10"></input>
+                    </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="number" name="shipping_phone" placeholder="Your Phone" required>
+              <?php } else { ?>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="text" name="shipping_name" placeholder="Your Name" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="number" name="shipping_phone" placeholder="Your Phone" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="email" name="shipping_email" value="" placeholder="Your Email Address">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <input type="text" name="shipping_address" placeholder="Your Address" required>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="form-group">
+                      <input placeholder="Write notes about your order" value="" name="shipping_note" id="order_msg" cols="30" rows="10"></input>
+                    </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="email" name="shipping_email" value="" placeholder="Your Email Address">
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="form-group">
-                    <input type="text" name="shipping_address" placeholder="Your Address" required>
-                  </div>
-                </div>
-                <div class="col-lg-12">
-                  <div class="form-group">
-                    <input placeholder="Write notes about your order" value="" name="shipping_note" id="order_msg" cols="30" rows="10"></input>
-                  </div>
-                </div>
-              </div>
+              <?php
+              }
+              ?>
+
               <div class="row checkout-btn">
                 <div class="col-md-6 smb-20">
                   <a href="{{URL::to('/')}}" class="btn style1">Continue Shopping<i class="flaticon-right-arrow-2"></i></a>

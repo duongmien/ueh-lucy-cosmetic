@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class UserController extends Controller
 {
@@ -20,14 +22,52 @@ class UserController extends Controller
     public function login()
     {
         $category_product = DB::table('tbl_product_category')->get();
-        return view('login')->with('category_product',$category_product);
+        return view('login')->with('category_product', $category_product);
     }
     public function register()
     {
         $category_product = DB::table('tbl_product_category')->get();
-        return view('register')->with('category_product',$category_product);
+        return view('register')->with('category_product', $category_product);
     }
+    public function add_user(Request $request)
+    {
+        $data = array();
+        $data['user_phone'] = $request->user_phone;
+        $data['user_password'] = $request->user_password;
+        $data['user_name'] = $request->user_name;
+        $data['user_address'] = $request->user_address;
 
+        DB::table('tbl_user')->insert($data);
+
+        // Session::put('user_id',$user_id);
+        Session::put('name', $request->user_name);
+        Session::put('message', 'Đăng ký thành công\nHãy đăng nhập');
+        // Session::put('message','đfd');
+        return Redirect('/login');
+    }
+    public function check_login(Request $request)
+    {
+        $user_phone = $request->user_phone;
+        $password = $request->password;
+
+        $login = DB::table('tbl_user')->where('user_phone', $user_phone)->where('user_password', $password)->first();
+        
+        if ($login) {
+            Session::put('name', $login->user_name);
+            Session::put('user_id', $login->user_id);
+            Session::put('message', 'Đăng nhập thành công');
+            return Redirect::to('/');
+        } else {
+            Session::put('message', 'Sai tài khoản hoặc mật khẩu');
+            return Redirect::to('/login');
+        }
+    }
+    public function log_out()
+    {
+        Session::put('name',null);
+        Session::put('user_id',null);
+        return Redirect::to('/login');
+    }
     /**
      * Show the form for creating a new resource.
      *

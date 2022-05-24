@@ -1,3 +1,13 @@
+<?php
+
+use Illuminate\Support\Facades\Session;
+
+$message = Session::get('message');
+if ($message) {
+  echo '<script>alert("' . $message . '");</script> ';
+  Session::put('message', null);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -52,14 +62,33 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-xl-1 my-1 text-center">
-          <a href="{{URL::to('login')}}" class="text-dark">
-            <i>Đăng nhập</i>
-          </a>
-          <a href="{{URL::to('register')}}" class="text-dark">
-            <i>Đăng ký</i>
-          </a>
-        </div>
+        <?php
+        $user_id = Session::get('user_id');
+        $user_name = Session::get('name');
+        if ($user_id != null) { ?>
+
+          <div class="col-12 col-xl-1 my-1 text-center">
+            <a href="#" class="text-dark" style="display: block;">
+              <i>{{$user_name}}</i>
+            </a>
+            <a href="{{URL::to('/log-out')}}" class="text-dark">
+              <i>Đăng xuất</i>
+            </a>
+          </div>
+        <?php } else { ?>
+          <div class="col-12 col-xl-1 my-1 text-center">
+            <a href="{{URL::to('login')}}" class="text-dark">
+              <i>Đăng nhập</i>
+            </a>
+            <a href="{{URL::to('register')}}" class="text-dark">
+              <i>Đăng ký</i>
+            </a>
+          </div>
+        <?php
+        }
+        ?>
+
+
         <div class="col-12 col-md-3 col-xl-1 my-1 text-center row align-items-center">
           <div class="col-6">
             <img src="{{asset('assets/images/Rectangle 4.png')}}" alt="" width="60" height="60" />
@@ -70,7 +99,7 @@
           @if (is_array(Session::get('cart')) || is_object(Session::get('cart')))
           @foreach(Session::get('cart') as $key => $cart)
           @php
-          $CartPrice +=  $cart['product_qty'] * $cart['product_price'];
+          $CartPrice += $cart['product_qty'] * $cart['product_price'];
           @endphp
           @endforeach
           @endif

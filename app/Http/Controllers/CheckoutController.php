@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 
 class CheckoutController extends Controller
 {
@@ -23,6 +24,13 @@ class CheckoutController extends Controller
         $category_product = DB::table('tbl_product_category')->get();
 
         return view('cart')->with('category_product',$category_product);
+    }
+    public function save_checkout(Request $request)
+    {
+        $cart=null;
+        Session::put('cart',$cart);
+        Session::put('message','Đặt hàng thành công\nĐơn hàng của bạn đang trong quá trình xác nhận, vui lòng đợi trong giây lát.');
+        return Redirect('/show-cart');
     }
     /**
      * Show the form for creating a new resource.

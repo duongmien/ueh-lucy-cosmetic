@@ -1,5 +1,6 @@
 @extends('layout')
 @section('content')
+
 <section class="login-content margin-top-60 paira-gap-2">
     <div class="container">
         <div class="row">
@@ -10,13 +11,14 @@
                 <div class="col-md-5">
                     <div class="row">
                         <div class="col-md-12">
-                            <form method="post" action="https://bulb-free-responsive-theme.myshopify.com/account/login" id="customer_login" accept-charset="UTF-8"><input type="hidden" name="form_type" value="customer_login" /><input type="hidden" name="utf8" value="✓" />
+                            <form action="{{URL::to('/check-login')}}" method="post" id="customer_login" accept-charset="UTF-8">
+                                @csrf
+                                <input type="hidden" name="token" value="{{ csrf_token() }}">
 
                                 <label>Số điện thoại</label>
-                                <input type="text" value="" name="customer[phone_number]" class="form-control margin-bottom-10" id="phone_number" />
-
+                                <input type="text" value="" name="user_phone" class="form-control margin-bottom-10" id="user_phone" />
                                 <label>Mật khẩu</label>
-                                <input type="password" value="" name="customer[password]" class="form-control margin-bottom-10" id="customer_password" size="16" />
+                                <input type="password" value="" name="password" class="form-control margin-bottom-10" id="password" size="16" />
                                 <button type="submit" class="btn btn-default pull-left">Đăng nhập</button>
                                 <a href="#" class="pull-right" data-toggle="modal" data-target="#paira-forget-password">
                                     <h5>Quên mật khẩu?</h5>
