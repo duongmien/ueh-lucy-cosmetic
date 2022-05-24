@@ -40,3 +40,5 @@ Route::post('/update-cart','CartController@update_cart');
 Route::get('/show-cart','CartController@show_cart');
 Route::get('/delete-cart','CartController@delete_cart');
 Route::post('/save-checkout','CheckoutController@save_checkout');
+
+Route::post('/search','ProductController@search');

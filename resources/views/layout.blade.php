@@ -52,14 +52,19 @@ if ($message) {
             </div>
           </div>
         </div>
+
         <div class="col-12 col-xl-3 my-2 text-center">
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search" id="searchInput" />
-            <div class="input-group-btn">
-              <button class="btn" id="searchBtn" type="button" onclick="handleSearch()">
-                <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
-              </button>
-            </div>
+            <form action="{{URL::to('/search')}}" method="POST">
+              @csrf
+              <input type="hidden" name="_token" value="{{ csrf_token() }}">
+              <input type="search"  name="keywords" class="form-control" placeholder="Search" id="searchInput" />
+              
+                <button class="btn" style="background-color:#6f42c1 ;" id="searchBtn" type="submit">
+                  <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
+                </button>
+              
+            </form>
           </div>
         </div>
         <?php
