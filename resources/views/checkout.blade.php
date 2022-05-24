@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-xl-12">
         <div class="breadcrumb-title">
-          <h2>Checkout</h2>
+          <h1 class="text-left text-uppercase">Checkout</h1>
         </div>
       </div>
     </div>
@@ -70,6 +70,16 @@
               @endforeach
               @endif
             </tbody>
+            <tfoot>
+              <tr>
+                  <td style="font-weight: bold; font-size: 18px">
+                      Total Amount
+                  </td>
+                  <td colspan=3 style="text-align: center; font-size: 18px; font-weight: bold; vertical-align: middle">
+                      {{number_format($total).' '.'VND'}}
+                  </td>
+              </tr>
+          </tfoot>
           </table>
         </div>
       </div>
@@ -94,23 +104,23 @@ use Illuminate\Support\Facades\Session;
             }
             ?>">
 
-            <h2 class="mb-0">Select Payment Method</h2>
+            <h2 class="mb-3">Select Payment Method</h2>
             <div class="select-method">
-              <div>
-                <input type="radio" id="test1" value="Cash On Delivery" checked name="payment_option">
-                <label for="test1">Cash On Delivery</label>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" id="test1" value="Cash On Delivery" checked name="payment_option">
+                <label class="form-check-label" for="test1">Cash On Delivery</label>
               </div>
               <div>
-                <input type="radio" id="test2" value="Card" name="payment_option">
-                <label for="test2">Card</label>
+                <input class="form-check-input" type="radio" id="test2" value="Card" name="payment_option">
+                <label class="form-check-label" for="test2">Card</label>
               </div>
               <div>
-                <input type="radio" id="test3" value="Momo" name="payment_option">
-                <label for="test3">Momo</label>
+                <input class="form-check-input" type="radio" id="test3" value="Momo" name="payment_option">
+                <label class="form-check-label" for="test3">Momo</label>
               </div>
             </div>
             <div class="billing-details">
-              <h4 class="mb-20">Billing Details</h4>
+              <h2 class="mb-3">Billing Details</h2>
 
               <?php
               $user_id = Session::get('user_id');
@@ -122,27 +132,27 @@ use Illuminate\Support\Facades\Session;
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="text" name="shipping_name" value="{{$user[0]->user_name}}" placeholder="Your Name" required>
+                      <input class="form-control" type="text" name="shipping_name" value="{{$user[0]->user_name}}" placeholder="Your Name" required>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="number" name="shipping_phone" value="{{$user[0]->user_phone}}" placeholder="Your Phone" required>
+                      <input class="form-control" type="number" name="shipping_phone" value="{{$user[0]->user_phone}}" placeholder="Your Phone" required>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="email" name="shipping_email" value="" placeholder="Your Email Address">
+                      <input class="form-control" type="email" name="shipping_email" value="" placeholder="Your Email Address">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="text" name="shipping_address" value="{{$user[0]->user_address}}" placeholder="Your Address" required>
+                      <input class="form-control" type="text" name="shipping_address" value="{{$user[0]->user_address}}" placeholder="Your Address" required>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <input placeholder="Write notes about your order" value="" name="shipping_note" id="order_msg" cols="30" rows="10"></input>
+                      <input class="form-control" placeholder="Write notes about your order" value="" name="shipping_note" id="order_msg" cols="30" rows="10"></input>
                     </div>
                   </div>
                 </div>
@@ -150,27 +160,27 @@ use Illuminate\Support\Facades\Session;
                 <div class="row">
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="text" name="shipping_name" placeholder="Your Name" required>
+                      <input class="form-control" type="text" name="shipping_name" placeholder="Your Name" required>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="number" name="shipping_phone" placeholder="Your Phone" required>
+                      <input class="form-control" type="number" name="shipping_phone" placeholder="Your Phone" required>
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="email" name="shipping_email" value="" placeholder="Your Email Address">
+                      <input class="form-control" type="email" name="shipping_email" value="" placeholder="Your Email Address">
                     </div>
                   </div>
                   <div class="col-lg-6">
                     <div class="form-group">
-                      <input type="text" name="shipping_address" placeholder="Your Address" required>
+                      <input class="form-control" type="text" name="shipping_address" placeholder="Your Address" required>
                     </div>
                   </div>
                   <div class="col-lg-12">
                     <div class="form-group">
-                      <input placeholder="Write notes about your order" value="" name="shipping_note" id="order_msg" cols="30" rows="10"></input>
+                      <input class="form-control" placeholder="Write notes about your order" value="" name="shipping_note" id="order_msg" cols="30" rows="10"></input>
                     </div>
                   </div>
                 </div>
@@ -178,15 +188,10 @@ use Illuminate\Support\Facades\Session;
               }
               ?>
 
-              <div class="row checkout-btn">
-                <div class="col-md-6 smb-20">
-                  <a href="{{URL::to('/')}}" class="btn style1">Continue Shopping<i class="flaticon-right-arrow-2"></i></a>
-                </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-lg-end">
-                  <h4 class="total-amt sm-none">Total: <span>{{number_format($total).' '.'VND'}}</span></h4>
-                  <input type="hidden" name="total" value="{{$total}}"></input>
-                  <input type="submit" name="send_order" class="inph inhe" value="Place Order"></input>
-                </div>
+              <div class="col-12 d-flex justify-content-end py-5 mb-5">
+                <a href="{{URL::to('/')}}" class="btn btn-primary rounded">Continue Shopping<i class="flaticon-right-arrow-2"></i></a>
+                <input type="hidden" name="total" value="{{$total}}"></input>
+                <input class="btn btn-primary ms-3 rounded" type="submit" name="send_order" class="inph inhe" value="Place Order"></input>
               </div>
             </div>
           </form>

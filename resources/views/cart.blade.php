@@ -8,9 +8,11 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="breadcrumb-title">
-                        <h2>Giỏ hàng</h2>
-                        <h3 style="color: #ffffff">Satisfy your cravings</h3>
-                        
+                        <h1 class="text-left text-uppercase">Giỏ hàng</h1>
+                        <h3 style="color: lavender" class="mb-0 text-center">Satisfy your cravings</h3>
+                        <div class="d-flex justify-content-center">
+                            <img style="width: 350px" src="./assets/images/cartttt.png "/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -44,7 +46,7 @@
                                 <tr align="center" class="cartpage">
                                     <td align="justify">
                                         <div class="wh_item">
-                                            <img src="{{$cart['product_image']}}" style="float:left;" height="100px" width="100px"  alt="Image">
+                                            <img src="{{$cart['product_image']}}" style="float:left; margin-right: 10px" height="100px" width="100px"  alt="Image">
                                             <div class="wh-item-info">
                                                 <a href="{{URL::to('/product/'.$cart['product_id'])}}">{{$cart['product_name']}}</a>
                                                 <span style="display: block;"><?php echo $cart['product_price']/1000?>.000 VND</span>
@@ -78,34 +80,22 @@
                                 @endforeach
                                 @endif
                             </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td style="font-weight: bold; font-size: 18px">
+                                        Total Amount
+                                    </td>
+                                    <td colspan=3 style="text-align: center; font-size: 18px; font-weight: bold; vertical-align: middle">
+                                        {{number_format($total).' '.'VND'}}
+                                    </td>
+                                </tr>
+                            </tfoot>
                         </table>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12">
-                    <div class="checkout-details">
-                        <div class="row mt-20">
-                            
-                            <div class="col-md-7 text-md-end">
-                                <a href="{{URL::to('/')}}" class="btn style1">Continue Shopping<i class="flaticon-right-arrow-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-12"id="totalCall">
-                    <div class="checkout-details smt-30 totalLoad" >
-                        <div class="content-box-title">
-                            <h4 class="mb-20">Total Bill</h4>
-                        </div>
-                        <div class="bill-details">
-                            <div class="total-wrap">
-                                <h5>Total Amount</h5>
-                                <span class="totalPrice">{{number_format($total).' '.'VND'}}</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 mt-3">
-                            <a href="{{URL::to('checkout')}}" class="btn style1 w-100 d-block">Proceed To Checkout<i class="lar la-check-circle"></i></a>
-                        </div>
-                    </div>
+                <div class="col-12 d-flex justify-content-end py-5 mb-5">                          
+                    <a href="{{URL::to('/')}}" class="btn btn-primary rounded">Continue Shopping<i class="flaticon-right-arrow-2"></i></a>
+                    <a href="{{URL::to('checkout')}}" class="btn btn-primary ms-3 rounded">Proceed To Checkout<i class="lar la-check-circle"></i></a>
                 </div>
             </div>
         </div>
