@@ -67,7 +67,7 @@
                                         <p class="wh-tem-price subtotal">
                                             <?php 
                                                 $subtotal = $cart['product_price'] * $cart['product_qty'];
-                                                echo number_format($subtotal).' '.'VND';
+                                                echo number_format($subtotal).' '.'VNĐ';
                                             ?>
                                         </p>
                                     </td>

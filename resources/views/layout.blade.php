@@ -58,12 +58,12 @@ if ($message) {
             <form action="{{URL::to('/search')}}" method="POST">
               @csrf
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <input type="search"  name="keywords" class="form-control" placeholder="Search" id="searchInput" />
-              
-                <button class="btn" style="background-color:#6f42c1 ;" id="searchBtn" type="submit">
-                  <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
-                </button>
-              
+              <input type="search" name="keywords" class="form-control" placeholder="Search" id="searchInput" style="width: 300px" />
+
+              <button class="btn" style="background-color:#6f42c1 ;" id="searchBtn" type="submit">
+                <i class="fa-solid fa-magnifying-glass" style="color: white"></i>
+              </button>
+
             </form>
           </div>
         </div>
@@ -183,8 +183,8 @@ if ($message) {
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      © 2022 Copyright:
+      <a class="text-white">Lucy Cosmetics</a>
     </div>
     <!-- Copyright -->
   </footer>

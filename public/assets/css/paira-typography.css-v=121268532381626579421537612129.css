@@ -1,18 +1,33 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+@import url(//fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap);
 body {
-    color: #000;
     background-color: #fff;
-    font-family: Lato;
+    font-family: 'Open Sans', sans-serif;
     font-size: 14px
 }
 
-h1,
+h1{
+    color: #000;
+    font-size: 30px;
+    background-color: lavender;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+h3:nth-child(1){
+    margin-top: 100px;
+}
+h3{
+    color: violet;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+}
 h2,
-h3,
 h4,
 h5,
 h6 {
     color: #000;
-    font-family: Roboto
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a,
@@ -94,7 +109,13 @@ header {
 
 footer {
     background: #000;
-    color: #fff
+    color: #fff;
+    /* margin-bottom: 3rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 5rem !important;
+    background-image: url(https://wp.lpd-themes.com/wp-content/uploads/2020/10/skyla-pattern_3_2.jpg?id=711) !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important; */
 }
 
 .header-top {
@@ -143,5 +164,22 @@ footer a:hover {
     background: #3dabf0;
     color: #fff
 }
+/* .top-seller{
+    margin-bottom: 3rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 5rem !important;
+    background-image: url(https://wp.lpd-themes.com/wp-content/uploads/2020/10/skyla-pattern_3_2.jpg?id=711) !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+}
+.makeup{
+    margin-bottom: 3rem !important;
+    padding-top: 3rem !important;
+    padding-bottom: 5rem !important;
+    background-image: url(https://wp.lpd-themes.com/wp-content/uploads/2020/10/skyla-pattern_3_2.jpg?id=711) !important;
+    background-position: 0 0 !important;
+    background-repeat: repeat !important;
+}
+} */
 
 /*# sourceMappingURL=/s/files/1/1412/7610/t/17/assets/paira-typography.css.map?v=121268532381626579421537612129 */

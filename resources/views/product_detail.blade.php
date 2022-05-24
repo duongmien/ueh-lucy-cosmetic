@@ -31,7 +31,7 @@
                     <div class="col-md-5 col-sm-6 col-xs-12 margin-top-60 padding-left-xs-15">
                         <h2 class="margin-clear paira-product-title margin-bottom-10 text-uppercase">{{$product[0]->product_name}}</h2>
                         <p class="margin-bottom-20 paira-price-preview">
-                            <span class="paira-default-price"><span class="money">{{$product[0]->product_price}}</span></span>
+                            <span class="paira-default-price"><span class="money">{{$product[0]->product_price}} VNĐ</span></span>
                         </p>
                         <div class="full-width">
                             <strong class="text-uppercase">Số lượng</strong>
