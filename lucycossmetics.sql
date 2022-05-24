@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 17, 2022 lúc 07:39 PM
+-- Thời gian đã tạo: Th5 24, 2022 lúc 09:38 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 7.4.27
 
@@ -163,17 +163,17 @@ CREATE TABLE `tbl_product` (
 
 INSERT INTO `tbl_product` (`product_id`, `producer_id`, `category_id`, `product_name`, `product_price`, `product_sold`, `product_thumbnail`, `product_preview`) VALUES
 (1, 1, 1, 'Son Thỏi Lì, Lên Màu Chuẩn Lilybyred Mood Cinema Velvet Epilogue 3.5g', 149000, 18, 'https://product.hstatic.net/1000006063/product/lilybyred_ee8a9bed80f1457c98d596bae18cff9d_1024x1024.jpg', NULL),
-(2, 2, 1, 'Mascara Làm Dài Và Cong Mi, Không Lem Không Trôi Maybelline The Hyper Curl Mascara', 102000, 34, 'https://product.hstatic.net/1000006063/product/7_f3ebda96634545b5813cb70bb822005e_1024x1024.jpg', NULL),
+(2, 2, 1, 'Mascara Làm Dài Và Cong Mi, Không Lem Không Trôi Maybelline The Hyper Curl Mascara', 102000, 34, 'https://product.hstatic.net/1000006063/product/6902395260646_6450cd5173324ebb83100516deea16cc_1024x1024.png', NULL),
 (3, 3, 1, 'Mặt Nạ Ngủ Môi Dưỡng Ẩm Chống Lão Hóa Unpa Bubi Bubi Lip Mask 9g', 199000, 25, 'https://product.hstatic.net/1000006063/product/4622_0864548d0beb4d8dafc46f342aa943b2_1024x1024_cd94c0d1f1a84866bc51aafddd22d0bc_1024x1024.jpg', NULL),
 (4, 4, 1, 'Son Kem Lì, Mịn Mượt Như Nhung Romand Milk Tea Velvet Tint 4.4g', 149000, 63, 'https://product.hstatic.net/1000006063/product/4912_121f6d9cde23493a912b2289a824c7df_1024x1024.jpg', NULL),
 (5, 3, 1, 'Son Dưỡng Dưỡng Ẩm Cho Môi Căng Mọng Unpa Bubi Bubi Lip Ampule 10ml', 99000, 33, 'https://product.hstatic.net/1000006063/product/4942_33bed52e11e84eb9815b770fba58ce4d_1024x1024.jpg', NULL),
-(6, 2, 1, 'Bút Kẻ Mắt Nước Siêu Sắc Mảnh, Không Lem Trôi Maybelline New York Hyper Sharp Liner Extreme 0.4g', 148000, 22, 'https://product.hstatic.net/1000006063/product/06_276b41f8b7c343deaf05a1d47f6819d3_1024x1024.jpg', NULL),
+(6, 2, 1, 'Bút Kẻ Mắt Nước Siêu Sắc Mảnh, Không Lem Trôi Maybelline New York Hyper Sharp Liner Extreme 0.4g', 148000, 22, 'https://product.hstatic.net/1000006063/product/6902395260646_6450cd5173324ebb83100516deea16cc_1024x1024.png', NULL),
 (7, 2, 1, 'Kem Lót Làm Mịn Da, Che Khuyết Điểm, Se Khít Lỗ Chân Lông Maybelline Baby Skin Pore Eraser 22ml', 115000, 74, 'https://product.hstatic.net/1000006063/product/6902395260646_6450cd5173324ebb83100516deea16cc_1024x1024.png', NULL),
 (8, 5, 1, 'Mặt Nạ Ngủ Môi Dưỡng Ẩm, Loại Bỏ Da Chết Cho Môi Hồng Hào Căng Mọng Hàn Quốc Carenel Lip Night Mask 5g', 49000, 35, 'https://product.hstatic.net/1000006063/product/ddd_72d521f64b884fc7a16490a9881cf8d0_1024x1024_ad4f0a6b408f40c1ba1dbb4978c1e35f_1024x1024.jpg', NULL),
 (9, 7, 2, 'Tẩy Da Chết Quế Hồi, Cam Chanh Body Eksklyuziv Kosmetik Gel Scrub 380g', 166000, 35, 'https://product.hstatic.net/1000006063/product/80e5335a57474629d1d7ffbbc6579a80-removebg-preview_d75ce29a968148b6a7f942dfaaeaeffd_1024x1024.png', NULL),
 (10, 8, 2, 'Bông tẩy Trang 100% Cotton Thổ Nhĩ Kỳ Ipek Klasik Cotton Pads - 150 Miếng', 92000, 111, 'https://product.hstatic.net/1000006063/product/ipek-e-4_82ca528bf71544b4bbcc4c6ef909255c_1024x1024.jpg', NULL),
 (11, 9, 2, 'Bông Tẩy Trang Lameila Makeup Cotton 3 Lớp Dày Dặn Làm Sạch Da CXT002', 57000, 13, 'https://product.hstatic.net/1000006063/product/4523_a571b39def4a4b9fa98fa9b5875cbe0e_1024x1024.jpg', NULL),
-(12, 10, 2, 'Nước Tẩy Trang Làm Sạch Tươi Mát Cho Da Dầu và Nhạy cảm L\'Oreal Micellar Water 3-in-1 Refreshing Even For Sensitive Skin 400ml', 130000, 52, 'https://product.hstatic.net/1000006063/product/05_93363a869b4a45308dd980c50b9c2c48_1024x1024.jpg', NULL),
+(12, 10, 2, 'Nước Tẩy Trang Làm Sạch Tươi Mát Cho Da Dầu và Nhạy cảm L\'Oreal Micellar Water 3-in-1 Refreshing Even For Sensitive Skin 400ml', 130000, 52, 'https://product.hstatic.net/1000006063/product/m11_2af753c77e8642e994754f740cd7fe85_1024x1024.png', NULL),
 (13, 11, 2, 'Mặt Nạ Miếng Dưỡng Ẩm, Dưỡng Trắng, Giảm Mụn, Phục Hồi Da Hàn Quốc BNBG (Vitamin A, B C, E)', 170000, 52, 'https://product.hstatic.net/1000006063/product/392_1d2b73ca9cf1465cb3c33364d259dcd7_1024x1024.jpg', NULL),
 (14, 12, 2, 'Mặt Nạ Tinh Chất Cấp Ẩm Chuyên Sâu Jkosmec Ultimate Hydrating Essence Mask', 140000, 83, 'https://product.hstatic.net/1000006063/product/jkosmec_new_2_b7b800dd5b194eafbbe82da51ce4a43a_1024x1024.jpg', NULL),
 (15, 10, 2, 'Nước Tẩy Trang Làm Sạch Sâu 3 In 1 L\'Oreal Micellar Water Deep Cleansing 400ml', 148000, 36, 'https://product.hstatic.net/1000006063/product/m11_2af753c77e8642e994754f740cd7fe85_1024x1024.png', NULL),
@@ -254,7 +254,11 @@ CREATE TABLE `tbl_user` (
 
 INSERT INTO `tbl_user` (`user_id`, `user_phone`, `user_password`, `user_name`, `user_address`) VALUES
 (1, '0911999001', '123456', 'User 1', '234 abc'),
-(2, '0911999002', '123456', 'User 2', '312 ma');
+(2, '0911999002', '123456', 'User 2', '312 ma'),
+(3, '0955156663', 'sgdsg', 'sdfg', 'sdgsdg'),
+(4, '123', '123', '123', '123'),
+(5, '1', '1', '1', '1'),
+(6, '0834254273', '123', 'Nguyễn Hồng Sơn', 'dânng');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -341,7 +345,7 @@ ALTER TABLE `tbl_product_category`
 -- AUTO_INCREMENT cho bảng `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
