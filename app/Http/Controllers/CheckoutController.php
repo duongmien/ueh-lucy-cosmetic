@@ -13,6 +13,7 @@ class CheckoutController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // Code cho quá trình thanh toán thanh toán
     public function index()
     {
         $category_product = DB::table('tbl_product_category')->get();

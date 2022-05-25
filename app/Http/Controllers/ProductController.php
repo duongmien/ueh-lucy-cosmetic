@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Session;
 
 class ProductController extends Controller
 {
+    // Code hiển thị sản phẩm trên trang chi tiết sản phẩm
     public function index()
     {
         $category_product = DB::table('tbl_product_category')->get();
@@ -20,6 +21,7 @@ class ProductController extends Controller
         $product = DB::table('tbl_product')->where('Product_id', $product_id)->limit(1)->get();
         return view('product_detail')->with('category_product', $category_product)->with('product', $product);
     }
+    // Code tìm kiếm sản phẩm
     public function search(Request $request)
     {
         $category_product = DB::table('tbl_product_category')->get();

@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
+    // Hiển thị các sản phẩm trên tranh chủ
     public function index()
     {
         $category_product = DB::table('tbl_product_category')->get();

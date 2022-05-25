@@ -18,17 +18,19 @@ class UserController extends Controller
     {
         //
     }
-
+    // Code đăng nhập
     public function login()
     {
         $category_product = DB::table('tbl_product_category')->get();
         return view('login')->with('category_product', $category_product);
     }
+    //Code đăng ký
     public function register()
     {
         $category_product = DB::table('tbl_product_category')->get();
         return view('register')->with('category_product', $category_product);
     }
+    // Code thêm người dùng trong quá trình đăng ký
     public function add_user(Request $request)
     {
         $data = array();
@@ -45,13 +47,14 @@ class UserController extends Controller
         // Session::put('message','đfd');
         return Redirect('/login');
     }
+    // Code kiểm tra đăng nhập
     public function check_login(Request $request)
     {
         $user_phone = $request->user_phone;
         $password = $request->password;
 
         $login = DB::table('tbl_user')->where('user_phone', $user_phone)->where('user_password', $password)->first();
-        
+
         if ($login) {
             Session::put('name', $login->user_name);
             Session::put('user_id', $login->user_id);
@@ -62,10 +65,11 @@ class UserController extends Controller
             return Redirect::to('/login');
         }
     }
+    // Code đăng xuất
     public function log_out()
     {
-        Session::put('name',null);
-        Session::put('user_id',null);
+        Session::put('name', null);
+        Session::put('user_id', null);
         return Redirect::to('/login');
     }
     /**

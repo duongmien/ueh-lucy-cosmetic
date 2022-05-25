@@ -17,6 +17,7 @@ class CartController extends Controller
     {
         //
     }
+    // Thêm sản phẩm vào giỏ hàng
     public function add_cart_ajax(Request $request)
     {
         $data = $request->all();
@@ -53,11 +54,14 @@ class CartController extends Controller
         Session::put('cart', $cart);
         Session::save();
     }
+    // Show những sản phẩm có trong giỏ hàng
     public function show_cart(Request $request){
         $category_product = DB::table('tbl_product_category')->get();
 
         return view('cart')->with('category_product',$category_product);
     }
+
+    // Xóa một sản phẩm có trong giỏ hàng
     public function delete_cart(Request $request){
         $product_id = $request->input('product_id');
         $cart = Session::get('cart');
@@ -70,6 +74,8 @@ class CartController extends Controller
             Session::put('cart',$cart);
         }
     }
+
+    // Update giỏ hàng
     public function update_cart(Request $request){
         $product_id = $request->input('product_id');
         $quantity = $request->input('quantity');

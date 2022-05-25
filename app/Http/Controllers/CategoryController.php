@@ -13,6 +13,8 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    // 
+    // Hiển thị danh mục bên thanh menu
     public function index()
     {
         $m1 = DB::table('tbl_product')->where('product_price', '<', 100000)->count();
@@ -31,6 +33,7 @@ class CategoryController extends Controller
         $category = DB::table('tbl_product_category')->where('category_id', 1)->get();
         return view('category')->with('product', $list_product_category)->with('category_product', $category_product)->with('category', $category);
     }
+    // Hiển thị sản phẩm theo danh mục
     public function show_product_category($category_id)
     {
         $m1 = DB::table('tbl_product')->where('product_price', '<', 100000)->count();
@@ -48,7 +51,7 @@ class CategoryController extends Controller
         $category = DB::table('tbl_product_category')->where('category_id', $category_id)->get();
         return view('category')->with('product', $list_product_category)->with('category_product', $category_product)->with('category', $category);
     }
-
+    // Lọc sản phẩm theo giá
     public function price_filter(Request $request)
     {
         $m1 = DB::table('tbl_product')->where('product_price', '<', 100000)->count();
