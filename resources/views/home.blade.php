@@ -59,6 +59,7 @@ use Illuminate\Support\Facades\DB;
                                 <h4 class="margin-top-10"><a href="{{URL::to('/product/'.$pro->product_id)}}" tppabs="https://bulb-free-responsive-theme.myshopify.com/products/free-demo-product-name-11" class="paira-product-title">{{$pro->product_name}}</a></h4>
 
                                 <div class="text-center padding-bottom-10 font-size-16"><span class="money"><?php echo $pro->product_price / 1000 ?>.000 VNĐ</span></div>
+                                <div class="text-center font-size-16"><span class="money">Đã bán: <?php echo $pro->product_sold ?></span></div>
 
                             </div>
                         </div>
