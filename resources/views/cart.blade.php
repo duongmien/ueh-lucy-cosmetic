@@ -81,11 +81,11 @@
                                 @endif
                             </tbody>
                             <tfoot>
-                                <tr>
-                                    <td style="font-weight: bold; font-size: 18px">
+                                <tr class="cartpage" id="totalCall">
+                                    <td class="totalLoad"style="font-weight: bold; font-size: 18px">
                                         Total Amount
                                     </td>
-                                    <td colspan=3 style="text-align: center; font-size: 18px; font-weight: bold; vertical-align: middle">
+                                    <td class="totalLoad" colspan=3 style="text-align: center; font-size: 18px; font-weight: bold; vertical-align: middle">
                                         {{number_format($total).' '.'VND'}}
                                     </td>
                                 </tr>
