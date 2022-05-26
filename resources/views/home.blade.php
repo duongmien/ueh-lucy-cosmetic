@@ -38,7 +38,7 @@ use Illuminate\Support\Facades\DB;
         </div>
     </section>
     <?php
-    $product = DB::table('tbl_product')->where('category_id', $cate->category_id)->limit(4)->get();
+    $product = DB::table('tbl_product')->where('category_id', $cate->category_id)->limit(4)->inRandomOrder()->get();
     ?>
     <section class="top-seller paira-gap-4">
         <div class="container">
